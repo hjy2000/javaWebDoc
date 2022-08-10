@@ -1252,11 +1252,11 @@ User select(@Param("username") String username,@Param("password") String passwor
 
   ![image-20210805231727206](assets/image-20210805231727206.png)
 
-==结论：以后接口参数是多个时，在每个参数上都使用 `@Param` 注解。这样代码的可读性更高。==
+结论：以后接口参数是多个时，在每个参数上都使用 `@Param` 注解。这样代码的可读性更高
 
 #### 1.10.2  单个参数
 
-* POJO 类型
+* POJO 类型（实体类）
 
   直接使用。要求 `属性名` 和 `参数占位符名称` 一致
 
@@ -1270,9 +1270,9 @@ User select(@Param("username") String username,@Param("password") String passwor
 
   > map.put("arg0"，collection集合);
   >
-  > map.put("collection"，collection集合;
+  > map.put("collection"，collection集合);
 
-  ==可以使用 `@Param` 注解替换map集合中默认的 arg 键名。==
+  可以使用 `@Param` 注解替换map集合中默认的 arg 键名。
 
 * List 集合类型
 
@@ -1284,7 +1284,7 @@ User select(@Param("username") String username,@Param("password") String passwor
   >
   > map.put("list"，list集合);
 
-  ==可以使用 `@Param` 注解替换map集合中默认的 arg 键名。==
+  可以使用 `@Param` 注解替换map集合中默认的 arg 键名。
 
 * Array 类型
 
@@ -1294,11 +1294,11 @@ User select(@Param("username") String username,@Param("password") String passwor
   >
   > map.put("array"，数组);
 
-  ==可以使用 `@Param` 注解替换map集合中默认的 arg 键名。==
+  可以使用 `@Param` 注解替换map集合中默认的 arg 键名。
 
 * 其他类型
 
-  比如int类型，`参数占位符名称` 叫什么都可以。尽量做到见名知意
+  比如int类型，`参数占位符名称` 叫什么都可以，尽量做到见名知意。
 
 ## 2，注解实现CRUD
 
@@ -1309,7 +1309,7 @@ User select(@Param("username") String username,@Param("password") String passwor
 public User select(int id);
 ```
 
-> ==注意：==
+> 注意：
 >
 > * 注解是用来替换映射配置文件方式配置的，所以使用了注解，就不需要再映射配置文件中书写对应的 `statement`
 
